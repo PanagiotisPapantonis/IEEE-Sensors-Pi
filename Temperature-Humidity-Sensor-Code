@@ -1,1 +1,108 @@
 
+import Adafruit_DHT
+from tkinter import *
+import tkinter as tk
+from PIL import ImageTk , Image
+import time
+from array import *
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+DHT_SENSOR = Adafruit_DHT.DHT11
+DHT_PIN = 4
+humidity,temperature = Adafruit_DHT.read_retry(DHT_SENSOR,DHT_PIN)
+time_array = array('d') # x axis
+humidity_array = array('d')# y axis
+temperature_array = array('d') # y1 axis
+time_counter=0
+
+#root of the GUI
+root = tk.Tk()
+root.option_add('*Font', 'Courier  10')
+root.geometry("400x400")
+root.title("IEEE programming team project 2022")
+
+#colour="#EAECC6"
+colour="#e5f2c1"
+canvas= tk.Canvas(root, height=400, width=400,bg=colour)
+canvas.pack(expand=YES, fill= BOTH)
+
+#Photos and icons
+TempPhoto = ImageTk.PhotoImage(Image.open("/home/pi/Desktop/IEEE_Prog/Temp.png"))
+HumPhoto = ImageTk.PhotoImage(Image.open("/home/pi/Desktop/IEEE_Prog/Humidity.png"))
+
+#Placing Photos and icons as labels
+HumLabel = Label(canvas,image = HumPhoto,bg=colour)
+HumLabel.place(x=225,y=140)
+TempLabel= Label(canvas,image = TempPhoto,bg=colour)
+TempLabel.place(x=25, y=150)
+
+#LABELS
+ClockLabel = Label(canvas,text="Current time:",bg=colour)
+ClockLabel.place(x=100, y=0)
+ClockLabel = Label(canvas,text="",bg=colour)
+ClockLabel.place(x=200,y=0)
+
+for i in range(0,10):
+        humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR,DHT_PIN)
+        time_counter=time_counter+ 0.001
+        time_array.append(time_counter)
+        humidity_array.append(humidity)
+        temperature_array.append(temperature)
+        print(i)  #test
+
+#DEFS MT
+def update():
+    TempLabel.config(text="Hello")
+    TempLabel.after(2000,update)
+    
+def clock():
+        hour = time.strftime("%H")
+        minute = time.strftime("%M")
+        second = time.strftime("%S")
+        ClockLabel.config(text=hour+ ":" + minute + ":" + second)
+        ClockLabel.after(1000,clock)
+        
+def diagramm():
+    for i in range(0,10):
+      plt.plot(time_array, temperature_array, color='blue', marker= 'o')
+      plt.xlabel('time_array[i]')
+      plt.ylabel('temperature_array[i]')
+    plt.show()
+    
+def diagrammHum():
+    for i in range(0,10):
+      plt.plot(time_array, humidity_array, color='red', marker= 'o')
+      plt.xlabel('time_array[i]')
+      plt.ylabel('humidity_array[i]')
+    plt.show()
+    
+#BUTTONS
+DiagrammButton = Button(canvas,text="Temperature diagram",padx=1,pady=1,borderwidth=0,bg=colour,command=diagramm)
+DiagrammButton.place(x=25,y=300)
+DiagrammButton2 = Button(canvas, text="Humidity diagramm",padx=1,pady=1,borderwidth=0,bg=colour,command=diagrammHum)
+DiagrammButton2.place(x=225,y=300)
+i=0
+        
+#Past Values
+TempTitle = Label(canvas,text="Recent samples:",bg=colour)
+TempValue1 = Label(canvas,text=temperature_array[i],bg=colour)
+TempValue2 = Label(canvas,text=temperature_array[i-1],bg=colour)
+TempValue3 = Label(canvas,text=temperature_array[i-2],bg=colour)
+HumTitle = Label(canvas,text="Recent samples:",bg=colour)
+HumValue1 = Label(canvas,text=humidity_array[i],bg=colour)
+HumValue2 = Label(canvas,text=humidity_array[i-1],bg=colour)
+HumValue3 = Label(canvas,text=humidity_array[i-2],bg=colour)
+
+#Placing Past values
+TempTitle.place (x=50, y=130)
+TempValue1.place(x=100, y=150)
+TempValue2.place(x=100, y=170)
+TempValue3.place(x=100, y=190)
+HumTitle.place(x=230,y=130)
+HumValue1.place(x=290,y=150)
+HumValue2.place(x=290,y=170)
+HumValue3.place(x=290,y=190)
+clock()                     
+root.mainloop()      
