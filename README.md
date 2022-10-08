@@ -6,38 +6,28 @@ IEEE Student Branch University of Western Macedonia, Kastoria
 The current project was assigned to the programming team of the IEEE student branch of UOW (Univerity of Western Macedonia) in the time period of Aplil1 2022 and expeted to be delived until June 2022.
 This project is based on receiving information by a temperature/humidity sensor connected to a raspberry and displacing them with the help of a python made GUI.
 The current project is able to tract the temperature and humidity changes of the last 48 hours, presenting the changes with the help of 2 diagramms. 
-Background code libraries:
-We are using a various amount of python lybraries included: 
-        1)Tkinter 
-        2)PIL
-        3)time
-        4)array
-        5)matplotlib.pyplot
-        6)pandas
 
-Libraries used in GUI:                                    
+Libraries used for the GUI:                                    
   1)Tkinter                                               
   2)Pil                                                   
 Libraries used in receiving the data from the sensor:     
-  1)Adafruit_DHT                                          
-  2)time                                                  
-  3)pandas                                                
+  3)Adafruit_DHT                                          
+  4)time                                                  
+  5)pandas                                                
 Libraries used for creating diagramms:                    
-  1)array                                                 
-  2)matplotlib.pyplot       
-  3)numpy
+  6)array                                                 
+  7)matplotlib.pyplot       
+  8)numpy
 
-//PHOTO of gui
-
+Equipment needed: 
+ Raspbery pi 4
+ DHT-11 sensor 
 
 Library Requirements:
-In order to run the project's code you have to install the following libraries:
- 1)Tkinter   2)PIL   3)time  4)array   5)matplotlib.pyplot     6)pandas
+In order to run the project's code you have to install libraries listed in the #Libraries-Installation section. 
 
-
-To use: 
-In order to run and view the final project you need the following files:
-ProjectImages
+Images Requirements: 
+All the images that are needed for the project are on the #ProjectImages file.
 
 
         
