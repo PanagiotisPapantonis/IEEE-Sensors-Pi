@@ -24,7 +24,8 @@ Libraries used in receiving the data from the sensor:
   3)pandas                                                
 Libraries used for creating diagramms:                    
   1)array                                                 
-  2)matplotlib.pyplot                                     
+  2)matplotlib.pyplot       
+  3)numpy
 
 //PHOTO of gui
 
