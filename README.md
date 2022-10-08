@@ -34,6 +34,7 @@ Library Requirements:
 In order to run the project's code you have to install the following libraries:
  1)Tkinter   2)PIL   3)time  4)array   5)matplotlib.pyplot     6)pandas
 
+
 To use: 
 In order to run and view the final project you need the following files:
 ProjectImages
