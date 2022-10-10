@@ -1,4 +1,4 @@
-# Spring Project 2022 - SensorsPy
+# Spring Project 2022 - SensorsPi
 Programming Team - Spring Project 2022 - SensorsPy
 IEEE Student Branch University of Western Macedonia, Kastoria
 
