@@ -29,5 +29,10 @@ In order to run the project's code you have to install libraries listed in the #
 Images Requirements: 
 All the images that are needed for the project are on the #ProjectImages file.
 
+Contributors:
+ieeesbkastoria-official
+PanagiotisPapantonis
+4dimitris3
+#to be added , Nikos svarnas
 
-        
+
