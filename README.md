@@ -20,7 +20,7 @@ Libraries used for creating diagramms:
   8)numpy
 
 Equipment needed: 
- Raspberry Pi 4
+ Raspberry Pi 4 & 
  DHT-11 sensor 
 
 Library Requirements:
