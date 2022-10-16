@@ -20,8 +20,8 @@ Libraries used for creating diagramms:
   8)numpy
 
 Equipment needed: 
- 1)Raspberry Pi 4 
- 2)DHT-11 sensor 
+ Raspberry Pi 4 & 
+ DHT-11 sensor 
 
 Library Requirements:
 In order to run the project's code you have to install libraries listed in the #Libraries-Installation section. 
@@ -30,9 +30,9 @@ Images Requirements:
 All the images that are needed for the project are on the #ProjectImages file.
 
 Contributors:
-1)ieeesbkastoria-official
-2)PanagiotisPapantonis
-3)4dimitris3
-4)Svarnik0
+ieeesbkastoria-official
+PanagiotisPapantonis
+4dimitris3
+Svarnik0
 
 
