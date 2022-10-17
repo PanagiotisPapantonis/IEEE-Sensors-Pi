@@ -6,8 +6,6 @@ from PIL import ImageTk , Image
 import time
 from array import *
 import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
 
 DHT_SENSOR = Adafruit_DHT.DHT11
 DHT_PIN = 4
@@ -29,8 +27,8 @@ canvas= tk.Canvas(root, height=400, width=400,bg=colour)
 canvas.pack(expand=YES, fill= BOTH)
 
 #Photos and icons
-TempPhoto = ImageTk.PhotoImage(Image.open("/home/pi/Desktop/IEEE_Prog/Temp.png"))
-HumPhoto = ImageTk.PhotoImage(Image.open("/home/pi/Desktop/IEEE_Prog/Humidity.png"))
+TempPhoto = ImageTk.PhotoImage(Image.open("/home/pi/Desktop/ProjectImages/Temp.png"))
+HumPhoto = ImageTk.PhotoImage(Image.open("/home/pi/Desktop/ProjectImages/Humidity.png"))
 
 #Placing Photos and icons as labels
 HumLabel = Label(canvas,image = HumPhoto,bg=colour)
@@ -50,13 +48,10 @@ for i in range(0,10):
         time_array.append(time_counter)
         humidity_array.append(humidity)
         temperature_array.append(temperature)
-        print(i)  #test
+        time.sleep(1800)
 
 #DEFS MT
-def update():
-    TempLabel.config(text="Hello")
-    TempLabel.after(2000,update)
-    
+
 def clock():
         hour = time.strftime("%H")
         minute = time.strftime("%M")
@@ -83,7 +78,7 @@ DiagrammButton = Button(canvas,text="Temperature diagram",padx=1,pady=1,borderwi
 DiagrammButton.place(x=25,y=300)
 DiagrammButton2 = Button(canvas, text="Humidity diagramm",padx=1,pady=1,borderwidth=0,bg=colour,command=diagrammHum)
 DiagrammButton2.place(x=225,y=300)
-i=0
+i = 0
         
 #Past Values
 TempTitle = Label(canvas,text="Recent samples:",bg=colour)
@@ -106,3 +101,7 @@ HumValue2.place(x=290,y=170)
 HumValue3.place(x=290,y=190)
 clock()                     
 root.mainloop()      
+                
+             
+
+
