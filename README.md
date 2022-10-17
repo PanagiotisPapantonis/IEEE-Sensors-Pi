@@ -12,12 +12,11 @@ Libraries used for the GUI:
   2)Pil                                                   
 Libraries used in receiving the data from the sensor:     
   3)Adafruit_DHT                                          
-  4)time                                                  
-  5)pandas                                                
+  4)time                                                                                                 
 Libraries used for creating diagramms:                    
-  6)array                                                 
-  7)matplotlib.pyplot       
-  8)numpy
+  5)array                                                 
+  6)matplotlib.pyplot       
+  
 
 Equipment needed: 
  Raspberry Pi 4 & 
