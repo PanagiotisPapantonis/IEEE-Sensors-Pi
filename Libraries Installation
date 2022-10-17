@@ -2,10 +2,8 @@ To install the libraries enter the following lines on the terminal:
  
   1)Tkinter : pip install tk
   2)Pillow : pip install pillow
-  3)Pandas : pip install pandas
-  4)Adafruit_DHT : pip install Adafruit_DHT
-  5)array : pip install Arrays
-  6)matplotlib.pyplot : pip install matplotlib.pyplot
-  7)numpy : pip install numpy
+  3)Adafruit_DHT : pip install Adafruit_DHT
+  4)array : pip install Arrays
+  5)matplotlib.pyplot : pip install matplotlib.pyplot
   
   Time Library does not need to be installed externally as the time module comes with Python's standard utility module.
