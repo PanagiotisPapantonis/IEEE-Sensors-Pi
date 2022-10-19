@@ -5,7 +5,7 @@ IEEE Student Branch University of Western Macedonia, Kastoria
 
 The current project was assigned to the programming team of the IEEE student branch of UOWM (Univerity of Western Macedonia) in the time period of Aplil 1st 2022 and expeted to be delived until June 2022.
 This project is based on receiving information from a temperature/humidity sensor connected to a Raspberry Pi and displaying them with the help of a python made GUI.
-The current project is able to track the temperature and humidity changes of the last  5 hours, representing the changes with the help of 2 diagramms. 
+The current project is able to track the temperature and humidity changes of the last  5 hours, representing the changes with the help of 2 diagrams. 
 
 Libraries used for the GUI:                                    
   1)Tkinter                                               
