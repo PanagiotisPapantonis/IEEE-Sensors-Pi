@@ -76,7 +76,7 @@ def diagrammHum():
 #BUTTONS
 DiagrammButton = Button(canvas,text="Temperature diagram",padx=1,pady=1,borderwidth=0,bg=colour,command=diagramm)
 DiagrammButton.place(x=25,y=300)
-DiagrammButton2 = Button(canvas, text="Humidity diagramm",padx=1,pady=1,borderwidth=0,bg=colour,command=diagrammHum)
+DiagrammButton2 = Button(canvas, text="Humidity diagram",padx=1,pady=1,borderwidth=0,bg=colour,command=diagrammHum)
 DiagrammButton2.place(x=225,y=300)
 i = 0
         
